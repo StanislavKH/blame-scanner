@@ -1,4 +1,4 @@
-# blame-scanner
+# GIT blame stat scanner
 
 ## Example usage 
 
@@ -9,10 +9,15 @@ will return stat for your project in JSON format
 ## Supported command line keys 
 
 --dir  Absolute path to root directory of GIT project files to be analysed.
+
 --excluded_dir Comma separated list with dirs for exclusion
+
 --xml Print result as XML.
+
 --json Print result as JSON.
+
 --help Show short help messae for possible keys
+
 
 ## Example JSON response
 ```JSON
@@ -63,4 +68,50 @@ will return stat for your project in JSON format
                 }
         ]
 }
+```
+## Example XML response
+```XML
+  <finaleResponse>
+      <spentTime>3.5002824610000003</spentTime>
+      <availableFileTypes>
+          <completeFilesCount>7</completeFilesCount>
+          <completeFoldersCount>8</completeFoldersCount>
+          <fileTypesData>
+              <fileExtension>.go</fileExtension>
+              <filesCount>1</filesCount>
+              <percentageUsage>14.286</percentageUsage>
+          </fileTypesData>
+          <fileTypesData>
+              <fileExtension>.no_ext</fileExtension>
+              <filesCount>2</filesCount>
+              <percentageUsage>28.571</percentageUsage>
+          </fileTypesData>
+          <fileTypesData>
+              <fileExtension>.exe</fileExtension>
+              <filesCount>1</filesCount>
+              <percentageUsage>14.286</percentageUsage>
+          </fileTypesData>
+          <fileTypesData>
+              <fileExtension>.bat</fileExtension>
+              <filesCount>1</filesCount>
+              <percentageUsage>14.286</percentageUsage>
+          </fileTypesData>
+          <fileTypesData>
+              <fileExtension>.sh</fileExtension>
+              <filesCount>1</filesCount>
+              <percentageUsage>14.286</percentageUsage>
+          </fileTypesData>
+          <fileTypesData>
+              <fileExtension>.md</fileExtension>
+              <filesCount>1</filesCount>
+              <percentageUsage>14.286</percentageUsage>
+          </fileTypesData>
+      </availableFileTypes>
+      <customerCommits>
+          <authorName>Kharitonov Stanislav</authorName>
+          <authorEmail>some.email@example.com</authorEmail>
+          <commitedLinesCount>19744</commitedLinesCount>
+          <commitsCount>3</commitsCount>
+      </customerCommits>
+  </finaleResponse>
 ```
