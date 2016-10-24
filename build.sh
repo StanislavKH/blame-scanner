@@ -3,7 +3,7 @@
 echo '** Building linux/amd64 **'
 export GOARCH=amd64
 export GOOS=linux
-go build -o build/linux/amd64/blame-sacan blamescanner.go
+go build -o build/linux/amd64/blame-scan blamescanner.go
 
 echo '** Building darwin/amd64 **'
 export GOARCH=amd64
